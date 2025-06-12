@@ -173,7 +173,7 @@ function showTripCost(path, graph) {
         totalTime += edge.weight;
     }
 
-    const tarifa = 100; // Tarifa por segundo
+    const tarifa = 0.5; // Tarifa por segundo
     const costo = totalTime * tarifa;
 
     alert(`Tiempo total: ${totalTime}s\nCosto del viaje: $${costo.toFixed(2)}`);
