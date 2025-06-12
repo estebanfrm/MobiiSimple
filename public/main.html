@@ -11,6 +11,8 @@
     <h2>Pantalla del mapa</h2>
     <h2>Selecciona origen y destino</h2>
 <div id="map">
+    <svg id="graph-lines" width="600" height="400" style="position:absolute; top:0; left:0; z-index:0;"></svg> 
+
     <div class="node" data-id="0">0</div>
     <div class="node" data-id="1">1</div>
     <div class="node" data-id="2">2</div>
@@ -19,6 +21,9 @@
     <div class="node" data-id="5">5</div>
 </div>
 <p id="selected-nodes">Origen: - | Destino: -</p>
+<p id="ruta-calculada">Ruta: -</p>
+
+<button id="calculateBtn">Calcular Ruta</button>
 
     <script type="module" src="main.js"></script> 
 </body>
