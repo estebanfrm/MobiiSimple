@@ -1,4 +1,3 @@
-// public/main.js
 import { GraphSimple } from './graph.js';
 
 const graph = new GraphSimple();
@@ -18,3 +17,32 @@ const edges = [
 edges.forEach(([u, v, w]) => graph.addEdge(u, v, w));
 
 console.log("Grafo cargado:", graph.getAdjList());
+
+let origin = null;
+let destination = null;
+
+document.querySelectorAll('.node').forEach(node => {
+    node.addEventListener('click', () => {
+        const id = parseInt(node.dataset.id);
+
+        if (origin === null) {
+            origin = id;
+            node.classList.add('origin');
+        } else if (destination === null && id !== origin) {
+            destination = id;
+            node.classList.add('destination');
+            console.log(`Origen: ${origin}, Destino: ${destination}`);
+        } else {
+            // Reiniciar selección
+            document.querySelectorAll('.node').forEach(n => {
+                n.classList.remove('origin', 'destination');
+            });
+            origin = id;
+            destination = null;
+            node.classList.add('origin');
+            
+        }
+        document.getElementById("selected-nodes").textContent = `Origen: ${origin} | Destino: ${destination}`;
+
+    });
+});
