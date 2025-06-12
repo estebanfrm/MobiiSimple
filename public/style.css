@@ -106,3 +106,8 @@ a:hover {
 
 .node.origin { background-color: royalblue; }
 .node.destination { background-color: seagreen; }
+
+.node.highlight {
+    border: 3px solid gold;
+    box-shadow: 0 0 10px yellow;
+}
