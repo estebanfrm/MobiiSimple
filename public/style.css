@@ -71,3 +71,38 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* visualizar los grafos */
+
+#map {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 2px dashed #ccc;
+    margin: 20px auto;
+}
+
+.node {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Posiciones fijas para los 6 nodos */
+.node[data-id="0"] { top: 30px; left: 100px; }
+.node[data-id="1"] { top: 30px; left: 400px; }
+.node[data-id="2"] { top: 150px; left: 250px; }
+.node[data-id="3"] { top: 270px; left: 100px; }
+.node[data-id="4"] { top: 270px; left: 400px; }
+.node[data-id="5"] { top: 180px; left: 520px; }
+
+.node.origin { background-color: royalblue; }
+.node.destination { background-color: seagreen; }
